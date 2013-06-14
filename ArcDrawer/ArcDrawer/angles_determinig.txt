@@ -1,0 +1,42 @@
+Vector2D vc_start = new Vector2D(
+        a_start.X - m_center.X, a_start.Y - m_center.Y
+      );
+      Vector2D vc_middle = new Vector2D(
+        a_middle.X - m_center.X, a_middle.Y - m_center.Y
+      );
+      Vector2D vc_end = new Vector2D(
+        a_end.X - m_center.X, a_end.Y - m_center.Y
+      );
+
+      bool b1 = (vc_middle.scal_prod(vc_start) > vc_start.scal_prod(vc_end) &&
+        vc_middle.scal_prod(vc_end) > vc_start.scal_prod(vc_end));
+      bool b2 = !((vc_middle.scal_prod(vc_start) <= 0) && (vc_middle.scal_prod(vc_start) <= 0));
+      bool b_middle_is_within = b1 || b2;
+
+      bool b_clockwise = Math.Sign(vc_start.cross_prod_z_ort(vc_end)) == -1;
+
+      if (b_clockwise && b_middle_is_within)
+      {
+        m_d_start_angle = GetAngleByPoint(ref a_start);
+        m_d_end_angle = GetAngleByPoint(ref a_end);
+      }
+      else if (b_clockwise && !b_middle_is_within)
+      {
+        m_d_start_angle = GetAngleByPoint(ref a_end);
+        m_d_end_angle = GetAngleByPoint(ref a_start);
+      }
+      else if (!b_clockwise && b_middle_is_within)
+      {
+        m_d_start_angle = GetAngleByPoint(ref a_end);
+        m_d_end_angle = GetAngleByPoint(ref a_start);
+      }
+      else if (!b_clockwise && !b_middle_is_within)
+      {
+        m_d_start_angle = GetAngleByPoint(ref a_start);
+        m_d_end_angle = GetAngleByPoint(ref a_end);
+      }
+
+      if (m_d_end_angle < m_d_start_angle)
+      {
+        m_d_end_angle += 2*Math.PI;
+      }

@@ -1,0 +1,9 @@
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\bin\Debug\ArcDrawer.exe
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\bin\Debug\ArcDrawer.pdb
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\obj\x86\Debug\ArcDrawer.Form1.resources
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\obj\x86\Debug\ArcDrawer.Properties.Resources.resources
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\obj\x86\Debug\ArcDrawer.exe
+E:\projects\quick_programs\ArcDrawer\ArcDrawer\obj\x86\Debug\ArcDrawer.pdb
